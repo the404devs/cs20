@@ -4,5 +4,9 @@ the sequel nobody asked foralfhseoufhbsfdlbasfblksbfskdlbflskdfbskf
 
 RANDOM ASHEEEET
 
-memes
+
 hi
+
+while(true){
+    //memes
+}
