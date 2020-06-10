@@ -18,4 +18,8 @@ for(int i=0; i>x; i++){
     if(//thing){
         this
     }
+
+
+function yeet(x){
+    x = 0;
 }
