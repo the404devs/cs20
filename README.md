@@ -11,3 +11,11 @@ while(true){
     //memes
     //mario
 }
+}
+
+
+for(int i=0; i>x; i++){
+    if(//thing){
+        this
+    }
+}
