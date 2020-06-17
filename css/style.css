@@ -1,3 +1,13 @@
+/* Variable declaration */
+
+:root {
+    --accent: cornflowerblue;
+    --dark: black;
+    --border: white;
+    --background: #404040;
+    --foreground: white;
+}
+
 @font-face {
     font-family: 'Gilroy';
     src: url('Gilroy-Light.woff2') format('woff2'), url('Gilroy-Light.woff') format('woff');
@@ -10,4 +20,66 @@
     src: url('Gilroy-ExtraBold.woff2') format('woff2'), url('Gilroy-ExtraBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    padding-top: 110px;
+}
+
+
+/* Page Header */
+
+.header {
+    font-family: "Gilroy Bold";
+    font-size: 1.5em;
+    color: var(--foreground);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 3.7em;
+    border-bottom: solid var(--border) 2px;
+    background-color: var(--background);
+}
+
+#header-text {
+    margin: 0px 20px 20px 2.5%;
+    padding-top: 25px;
+    font-weight: normal;
+    -webkit-text-stroke: var(--dark) 2px;
+    paint-order: fill stroke;
+}
+
+#header-text:before {
+    content: "Interactive Course Simulator:";
+    font-family: "Gilroy";
+    color: var(--foreground);
+    position: absolute;
+    font-size: 20px;
+    text-align: right;
+    font-weight: normal;
+    top: 10px;
+    left: calc(2.5% + 3px);
+    -webkit-text-stroke: 0;
+}
+
+#game-container {
+    border: 2px solid var(--border);
+    background-color: var(--accent);
+    width: -webkit-fill-avaliable;
+    padding: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#game-container canvas {
+    border-radius: 5px;
+}
+
+#game-container p,
+#game-container ul {
+    text-align: left;
 }
