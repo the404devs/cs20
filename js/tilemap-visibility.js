@@ -1,27 +1,29 @@
+/* This part is responsible for hiding rooms that haven't been visited, and darkening ones the player isn't in. All rooms start hidden, and once the player enters they become active. Room dims when player leaves*/
+
 export default class TilemapVisibility {
-  constructor(shadowLayer) {
-    this.shadowLayer = shadowLayer;
-    this.activeRoom = null;
-  }
-
-  setActiveRoom(room) {
-    // We only need to update the tiles if the active room has changed
-    if (room !== this.activeRoom) {
-      this.setRoomAlpha(room, 0); // Make the new room visible
-      if (this.activeRoom) this.setRoomAlpha(this.activeRoom, 0.5); // Dim the old room
-      this.activeRoom = room;
+    constructor(shadowLayer) {
+        this.shadowLayer = shadowLayer;
+        this.activeRoom = null;
     }
-  }
 
-  // Helper to set the alpha on all tiles within a room
-  setRoomAlpha(room, alpha) {
-    this.shadowLayer.forEachTile(
-      t => (t.alpha = alpha),
-      this,
-      room.x,
-      room.y,
-      room.width,
-      room.height
-    );
-  }
+    setActiveRoom(room) {
+        // We only need to update the tiles if the active room has changed
+        if (room !== this.activeRoom) {
+            this.setRoomAlpha(room, 0); // Make the new room visible
+            if (this.activeRoom) this.setRoomAlpha(this.activeRoom, 0.5); // Dim the old room
+            this.activeRoom = room;
+        }
+    }
+
+    // Helper to set the alpha on all tiles within a room
+    setRoomAlpha(room, alpha) {
+        this.shadowLayer.forEachTile(
+            t => (t.alpha = alpha),
+            this,
+            room.x,
+            room.y,
+            room.width,
+            room.height
+        );
+    }
 }
