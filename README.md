@@ -1,7 +1,6 @@
 # Interactive Course Simulator: Computer Science 2020
 
 the sequel nobody asked for, from the franchise nobody loves
-(test) bruh
 
 `index.js`: Starting point for code, initializing Phaser and whatnot
 
