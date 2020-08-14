@@ -36,8 +36,8 @@ export default class PlayerRoom extends Phaser.Scene {
         const map = this.make.tilemap({
             tileWidth: 48,
             tileHeight: 48,
-            width: 24,
-            height: 12
+            width: 23,
+            height: 13
         });
         /*Layer initialization here*/
         const tileset = map.addTilesetImage("tiles", null, 48, 48, 1, 2); // 1px margin, 2px spacing
@@ -111,6 +111,7 @@ export default class PlayerRoom extends Phaser.Scene {
         this.player = new Player(this, 500, 300);
         this.physics.add.collider(this.player.sprite, this.groundLayer);
         this.physics.add.collider(this.player.sprite, this.stuffLayer);
+        this.player.sprite.setDepth(2); //z-index of player
     }
 
     update() {
