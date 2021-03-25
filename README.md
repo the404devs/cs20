@@ -11,3 +11,4 @@ the sequel nobody asked for, from the franchise nobody loves
 `tilemap-visibility.js`: Controls the visibility of the different rooms within the dungeon.
 
 `tile-mapping.js`: Gives ids to the different tiles from the main tileset. We'll make our own tiles eventually.
+
